@@ -1,12 +1,13 @@
-input_id = input("아이디를 입력하세요. \n")
+input_id = input("아이디를 입력해주세요. \n")
 
-members = ["a", "b", "c", "d", "e", "f"]   #real_egoing = "egoing"
-                                           #real_k8805 = "k8805"
+def login(_id):
+    members = ["egoing", "k8805", "leezche"]
+    for member in members:
+        if member == _id:
+            return True
+    return False
 
-for member in members:
-    if member == input_id:
-        print("Hello!, "+member)
-        import sys
-        sys.exit()
-
-print("Who are you?")
+if login(input_id):
+    print("Hello!, "+input_id)
+else:
+    print("Who are you?")
